@@ -403,7 +403,7 @@ The complete beginning-of-session workflow is therefore:
 ```bash
 git switch main
 git pull --ff-only origin main
-git switch <surname>
+git switch <name>
 git merge main
 ```
 
@@ -544,11 +544,11 @@ If several team members need to work at the same time, avoid editing the final n
 Instead, create separate temporary notebooks, for example:
 
 ```text
-drafts/
-├── lacroix.ipynb
-├── baruselli.ipynb
-├── delloye.ipynb
-└── drezet.ipynb
+individual_work/
+├── marie.ipynb
+├── chloe.ipynb
+├── bertille.ipynb
+└── enea.ipynb
 ```
 
 Each person works only in their own draft notebook on their personal branch.
