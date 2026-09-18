@@ -1,4 +1,4 @@
-﻿# CH-315 Modeling Lab â€” Computational Carpentry Project
+# CH-315 Modeling Lab — Computational Carpentry Project
 
 ## Project information
 
@@ -10,12 +10,12 @@
 
 | First name(s) | Surname | SCIPER | EPFL email | Git branch |
 |---|---|---:|---|---|
-| Marie | Lacroix | 372543 | marie.lacroix@epfl.ch | `lacroix` |
-| ChloÃ© | Baruselli | 363236 | chloe.baruselli@epfl.ch | `baruselli` |
-| Bertille Astrid Marie | Delloye | 397727 | bertille.delloye@epfl.ch | `delloye` |
-| EnÃ©a CÃ©line | Drezet--MarÃ§ot | 400586 | enea.drezet-marcot@epfl.ch | `drezet-marcot` |
+| Marie | Lacroix | 372543 | marie.lacroix@epfl.ch | `marie` |
+| Chloé | Baruselli | 363236 | chloe.baruselli@epfl.ch | `chloe` |
+| Bertille Astrid Marie | Delloye | 397727 | bertille.delloye@epfl.ch | `bertille` |
+| Enéa Céline | Drezet--Marçot | 400586 | enea.drezet-marcot@epfl.ch | `enea` |
 
-The branch names intentionally contain only the name, in lowercase and without accents.
+The branch names intentionally contain only the surname, in lowercase and without accents.
 
 ---
 
@@ -37,7 +37,7 @@ The project is divided into three parts:
    - Verify mass conservation.
 
 3. **Simulation and modeling**
-   - Estimate Ï€ using a Monte Carlo simulation.
+   - Estimate π using a Monte Carlo simulation.
    - Simulate chemistry-inspired molecular collisions.
    - Estimate a reaction probability from collision energies.
 
@@ -51,11 +51,11 @@ The repository should contain at least:
 
 ```text
 .
-â”œâ”€â”€ GroupG_Block1_project.ipynb
-â”œâ”€â”€ periodic_table.csv
-â”œâ”€â”€ requirements.txt
-â”œâ”€â”€ README.md
-â””â”€â”€ .gitattributes
+├── GroupG_Block1_project.ipynb
+├── periodic_table.csv
+├── requirements.txt
+├── README.md
+└── .gitattributes
 ```
 
 The structure may evolve during the project.
@@ -188,9 +188,9 @@ Then open the project notebook in VS Code and select:
 
 ```text
 Select Kernel
-â†’ Select Another Kernel
-â†’ Python Environments
-â†’ Python (mod_lab)
+→ Select Another Kernel
+→ Python Environments
+→ Python (mod_lab)
 ```
 
 Depending on the VS Code version, `mod_lab` may appear directly in the kernel list.
@@ -262,23 +262,6 @@ The notebook on the collaborator's computer can still contain outputs while they
 
 The repository should contain a `.gitattributes` file configured for `nbstripout`.
 
-The person initially configuring the repository can run:
-
-```bash
-conda activate mod_lab
-python -m pip install nbstripout
-nbstripout --install --attributes .gitattributes
-```
-
-Then commit `.gitattributes`:
-
-```bash
-git add .gitattributes
-git commit -m "Configure notebook metadata cleaning"
-git push
-```
-
-This repository-level step only has to be committed once.
 
 ## 2.2 Configuration required on every collaborator's computer
 
@@ -311,22 +294,22 @@ The repository uses the following branches:
 
 ```text
 main
-â”œâ”€â”€ lacroix
-â”œâ”€â”€ baruselli
-â”œâ”€â”€ delloye
-â””â”€â”€ drezet-marcot
+├── marie
+├── chloe
+├── bertille
+└── enea
 ```
 
 ### Branch ownership
 
-- Marie Lacroix â†’ `lacroix`
-- ChloÃ© Baruselli â†’ `baruselli`
-- Bertille Delloye â†’ `delloye`
-- EnÃ©a Drezet--MarÃ§ot â†’ `drezet-marcot`
+- Marie Lacroix → `marie`
+- Chloé Baruselli → `chloe`
+- Bertille Delloye → `bertille`
+- Enéa Drezet--Marçot → `enea`
 
 `main` is the shared stable branch.
 
-Each collaborator works on their own name branch and sends completed work to `main` through a Pull Request.
+Each collaborator works on their own surname branch and sends completed work to `main` through a Pull Request.
 
 ### Important rules
 
@@ -357,29 +340,29 @@ Then create the appropriate branch.
 ### Marie
 
 ```bash
-git switch -c lacroix
-git push -u origin lacroix
+git switch -c marie
+git push -u origin marie
 ```
 
-### ChloÃ©
+### Chloé
 
 ```bash
-git switch -c baruselli
-git push -u origin baruselli
+git switch -c chloe
+git push -u origin chloe
 ```
 
 ### Bertille
 
 ```bash
-git switch -c delloye
-git push -u origin delloye
+git switch -c bertille
+git push -u origin bertille
 ```
 
-### EnÃ©a
+### Enéa
 
 ```bash
-git switch -c drezet-marcot
-git push -u origin drezet-marcot
+git switch -c enea
+git push -u origin enea
 ```
 
 The `-u` option connects the local branch to the corresponding branch on GitHub. After this first push, `git push` is sufficient.
@@ -407,12 +390,6 @@ Then switch to your personal branch:
 git switch <name>
 ```
 
-For example, EnÃ©a uses:
-
-```bash
-git switch drezet-marcot
-```
-
 Before editing files, bring the latest `main` into your branch:
 
 ```bash
@@ -426,7 +403,7 @@ The complete beginning-of-session workflow is therefore:
 ```bash
 git switch main
 git pull --ff-only origin main
-git switch <name>
+git switch <surname>
 git merge main
 ```
 
@@ -488,7 +465,7 @@ On GitHub:
 2. Open **Pull requests**.
 3. Click **New pull request** or **Compare & pull request**.
 4. Set the base branch to `main`.
-5. Set the compare branch to the collaborator's name branch.
+5. Set the compare branch to the collaborator's surname branch.
 6. Give the Pull Request a clear title.
 7. Briefly explain what was changed.
 8. Mention how the work was tested.
@@ -527,13 +504,6 @@ git switch <name>
 git merge main
 git push
 ```
-
-For EnÃ©a, for example:
-
-```bash
-git switch drezet-marcot
-git merge main
-git push
 ```
 
 This keeps the personal branch synchronized with the latest stable version.
@@ -556,11 +526,11 @@ For example:
 
 ```text
 Marie edits the final notebook
-â†’ Marie commits, pushes and merges
-â†’ ChloÃ© updates main
-â†’ ChloÃ© edits the next section
-â†’ ChloÃ© commits, pushes and merges
-â†’ etc.
+→ Marie commits, pushes and merges
+→ Chloé updates main
+→ Chloé edits the next section
+→ Chloé commits, pushes and merges
+→ etc.
 ```
 
 This sequential approach is the safest when everyone needs to contribute to the same notebook.
@@ -575,10 +545,10 @@ Instead, create separate temporary notebooks, for example:
 
 ```text
 drafts/
-â”œâ”€â”€ lacroix.ipynb
-â”œâ”€â”€ baruselli.ipynb
-â”œâ”€â”€ delloye.ipynb
-â””â”€â”€ drezet-marcot.ipynb
+├── lacroix.ipynb
+├── baruselli.ipynb
+├── delloye.ipynb
+└── drezet.ipynb
 ```
 
 Each person works only in their own draft notebook on their personal branch.
@@ -722,7 +692,7 @@ git pull --ff-only origin main
 ### Switch back to your personal branch
 
 ```bash
-git switch <name>
+git switch <surname>
 ```
 
 ### Bring the latest `main` into your branch
@@ -743,13 +713,13 @@ conda activate mod_lab
 git switch main
 git pull --ff-only origin main
 
-git switch <name>
+git switch <surname>
 git merge main
 
 git status
 ```
 
-Confirm that you are on your own name branch before editing files.
+Confirm that you are on your own surname branch before editing files.
 
 ## After working
 
@@ -760,7 +730,7 @@ git commit -m "Clear description of the work"
 git push
 ```
 
-When the contribution is complete, open a Pull Request from the name branch into `main`.
+When the contribution is complete, open a Pull Request from the surname branch into `main`.
 
 ---
 
@@ -768,7 +738,7 @@ When the contribution is complete, open a Pull Request from the name branch into
 
 Before opening a Pull Request, verify that:
 
-- you are working on your name branch and not on `main`;
+- you are working on your surname branch and not on `main`;
 - your branch contains the latest relevant changes from `main`;
 - the notebook opens correctly;
 - the `Python (mod_lab)` kernel is selected;
@@ -823,7 +793,7 @@ GroupG_Block1_project.ipynb
 4. Register Python (mod_lab)
 5. Configure nbstripout
 6. Update main
-7. Switch to your name branch
+7. Switch to your surname branch
 8. Merge the latest main into your branch
 9. Work and test
 10. Commit
@@ -837,10 +807,9 @@ GroupG_Block1_project.ipynb
 The most important rules are:
 
 - `main` must remain the stable shared version.
-- Each collaborator works on their name branch.
+- Each collaborator works on their surname branch.
 - Do not edit the final notebook simultaneously unless absolutely necessary.
 - Pull the latest `main` before starting new work.
 - Test before merging.
 - Keep `requirements.txt` synchronized with the packages actually used by the project.
 - Keep unnecessary notebook outputs and metadata out of Git with `nbstripout`.
-
