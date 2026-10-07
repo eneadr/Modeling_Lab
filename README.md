@@ -12,8 +12,8 @@
 |---|---|---:|---|---|
 | Marie | Lacroix | 372543 | marie.lacroix@epfl.ch | `marie` |
 | Chloé | Baruselli | 363236 | chloe.baruselli@epfl.ch | `chloe` |
-| Bertille Astrid Marie | Delloye | 397727 | bertille.delloye@epfl.ch | `bertille` |
-| Enéa Céline | Drezet--Marçot | 400586 | enea.drezet-marcot@epfl.ch | `enea` |
+| Bertille | Delloye | 397727 | bertille.delloye@epfl.ch | `bertille` |
+| Enéa | Drezet--Marçot | 400586 | enea.drezet-marcot@epfl.ch | `enea` |
 
 The branch names intentionally contain only the surname, in lowercase and without accents.
 
