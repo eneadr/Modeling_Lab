@@ -4,3 +4,14 @@ matplotlib
 ipykernel
 nbstripout
 pyiast
+scikit-learn
+scipy
+xgboost
+bokeh
+holoviews
+seaborn
+plotly
+ipywidgets
+hyperopt
+kaggle
+pymatviz
